@@ -18,14 +18,7 @@ namespace Bakery
       Console.WriteLine("----------------");
       Console.WriteLine("Pastries");
       Console.WriteLine("Buy one for $2 or three for $5");
-      Console.WriteLine("================");
-      Console.WriteLine("How many loaves of bread would you like to buy?");
-      string stringLoaves = Console.ReadLine();
-      int numberOfLoaves = int.Parse(stringLoaves);
-      Console.WriteLine("How many pastries would you like to buy?");
-      string stringPastries = Console.ReadLine();
-      int numberOfPastries = int.Parse(stringPastries);
-      Console.WriteLine("You would like to buy " + numberOfLoaves + " loaves of bread and " + numberOfPastries + " pastries. Is that correct? Y/N"); 
+      IsOrderCorrect(OrderInquiry());
     }
 
     static void IsOrderCorrect(string userResponse)
@@ -36,14 +29,28 @@ namespace Bakery
       } 
       else if (userResponse.ToLower() == "n")
       {
-        orderInquiry();
+        OrderInquiry();
       }
       else
       {
         Console.WriteLine("Please confirm your order by entering Y/N");
-        string updatedResponse = Console.ReadLine();
-        IsOrderCorrect(updatedResponse);
+        string yesOrNo = Console.ReadLine();
+        IsOrderCorrect(yesOrNo);
       }
+    }
+
+    static string OrderInquiry()
+    {
+      Console.WriteLine("================");
+      Console.WriteLine("How many loaves of bread would you like to buy?");
+      string stringLoaves = Console.ReadLine();
+      int numberOfLoaves = int.Parse(stringLoaves);
+      Console.WriteLine("How many pastries would you like to buy?");
+      string stringPastries = Console.ReadLine();
+      int numberOfPastries = int.Parse(stringPastries);
+      Console.WriteLine("You would like to buy " + numberOfLoaves + " loaves of bread and " + numberOfPastries + " pastries. Is that correct? Y/N"); 
+      string yesOrNo = Console.ReadLine();
+      return yesOrNo;
     }
   }
 }
