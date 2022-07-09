@@ -15,7 +15,14 @@ namespace Bakery.Models
     {
       if (quantityOrdered > 2)
       {
-        return 0;
+        if (quantityOrdered % 3 == 0)
+        {
+          return quantityOrdered / 3 * 5;
+        }
+        else
+        {
+          return 0;
+        }
       }
       else
       {
