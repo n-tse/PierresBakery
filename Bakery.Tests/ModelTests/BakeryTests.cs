@@ -42,10 +42,10 @@ namespace Bakery.Test
     }
 
     [TestMethod]
-    public void CalculateTotalCost_CostForTwoPastries_4()
+    public void CalculateTotalCost_CostForThreePastries_4()
     {
       Pastry testPastry = new Pastry(0);
-      Assert.AreEqual(4, testPastry.CalculateTotalCost(2));
+      Assert.AreEqual(5, testPastry.CalculateTotalCost(3));
     }
   }
 }
