@@ -27,5 +27,23 @@ namespace Bakery
       int numberOfPastries = int.Parse(stringPastries);
       Console.WriteLine("You would like to buy " + numberOfLoaves + " loaves of bread and " + numberOfPastries + " pastries. Is that correct? Y/N"); 
     }
+
+    static void IsOrderCorrect(string userResponse)
+    {
+      if (userResponse.ToLower() == "y")
+      {
+        Console.WriteLine("order confirmed");
+      } 
+      else if (userResponse.ToLower() == "n")
+      {
+        orderInquiry();
+      }
+      else
+      {
+        Console.WriteLine("Please confirm your order by entering Y/N");
+        string updatedResponse = Console.ReadLine();
+        IsOrderCorrect(updatedResponse);
+      }
+    }
   }
 }
