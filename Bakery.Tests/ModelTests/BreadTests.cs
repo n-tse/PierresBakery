@@ -7,10 +7,10 @@ namespace Bakery.Test
   public class BreadTests
   {
     [TestMethod]
-    public void CalculateTotalCost_Return1_True()
+    public void CalculateTotalCost_Return1_1()
     {
       Bread testBread = new Bread(0, 0);
-      Assert.AreEqual(true, testBread.CalculateTotalCost(5));
+      Assert.AreEqual(1, testBread.CalculateTotalCost(5));
     }
   }
 }
