@@ -21,7 +21,7 @@ namespace Bakery.Models
         }
         else
         {
-          return quantityOrdered / 3 * 10;
+          return quantityOrdered / 3 * 10 + quantityOrdered % 3 * 5;
         }
       }
       else
