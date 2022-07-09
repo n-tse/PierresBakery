@@ -19,8 +19,13 @@ namespace Bakery
       Console.WriteLine("Pastries");
       Console.WriteLine("Buy one for $2 or three for $5");
       Console.WriteLine("================");
-      Console.WriteLine("How many would you like to buy");
-
+      Console.WriteLine("How many loaves of bread would you like to buy?");
+      string stringLoaves = Console.ReadLine();
+      int numberOfLoaves = int.Parse(stringLoaves);
+      Console.WriteLine("How many pastries would you like to buy?");
+      string stringPastries = Console.ReadLine();
+      int numberOfPastries = int.Parse(stringPastries);
+      Console.WriteLine("You would like to buy " + numberOfLoaves + " loaves of bread and " + numberOfPastries + " pastries. Is that correct? Y/N"); 
     }
   }
 }
