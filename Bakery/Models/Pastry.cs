@@ -19,7 +19,7 @@ namespace Bakery.Models
       }
       else
       {
-        return 2;
+        return quantityOrdered * 2;
       }
     }
   }
