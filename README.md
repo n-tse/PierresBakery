@@ -25,7 +25,7 @@ After entering the quantity of each item you would like to order, the program wi
 ## Setup/Installation Requirements
 
 * _Clone repository from GitHub_
-* _Open your terminal and run the command $ git clone https://github.com/n-tse/pierres-bakery.git_
+* _Open your terminal and run the command $ git clone https://github.com/n-tse/PierresBakery_
 * _Run the command $ dotnet build_
 * _Using the command $ cd Bakery, navigate to the Bakery directory_
 * _Run the command $ dotnet run_
@@ -33,7 +33,7 @@ After entering the quantity of each item you would like to order, the program wi
 
 ## Known Bugs
 
-* no known bugs
+* The program is not able to handle non-integer values when prompting user for order quantity
 
 ## License
 
